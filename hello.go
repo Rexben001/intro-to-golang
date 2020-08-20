@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"sort"
+)
 
 func main() {
 
@@ -64,11 +67,43 @@ func main() {
 	// // * gets the value instead of the memory reference
 	// fmt.Println(*totalRef)
 
-	// arrays
-	var numbers = [4]int{1, 2, 3, 4}
+	// // arrays
+	// var numbers = [4]int{1, 2, 3, 4}
 
-	fmt.Println(numbers)
-	fmt.Println(len(numbers))
-	fmt.Println(numbers[2])
+	// fmt.Println(numbers)
+	// fmt.Println(len(numbers))
+	// fmt.Println(numbers[2])
+
+	// // slices, it's an abstraction built on top of Go's array type.
+	// // Create a slice by not adding array length
+	// var numbers = []int{1, 2, 7, 9, 3, 4}
+	// fmt.Println(numbers)
+
+	// // append the slice
+	// numbers = append(numbers, 5)
+	// fmt.Println(numbers)
+
+	// // slice the slice LOL
+	// numbers = append(numbers[2:4])
+	// fmt.Println(numbers)
+
+	// // make allocates and initialises an object, slice, map, array
+	// letters := make([]string, 3, 3)
+
+	// letters[0] = "A"
+	// letters[1] = "B"
+	// letters[2] = "C"
+
+	// letters = append(letters, "D")
+
+	// fmt.Println(letters)
+	// // to get the total capicity of the slice
+	// fmt.Println(cap(letters))
+
+	// //sort arrays
+	// isSorted := sort.IntsAreSorted(numbers)
+	// fmt.Println(isSorted)
+	// sort.Ints(numbers)
+	// fmt.Println(numbers)
 
 }
