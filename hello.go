@@ -53,15 +53,22 @@ func main() {
 	// 	fmt.Println("Thanks for banking with us")
 	// }
 
-	// pointers
-	var total float64 = 33.2
+	// // pointers
+	// var total float64 = 33.2
 
-	// & reference to the memory location
-	totalRef := &total
+	// // & reference to the memory location
+	// totalRef := &total
 
-	fmt.Println(total, totalRef)
+	// fmt.Println(total, totalRef)
 
-	// * gets the value instead of the memory reference
-	fmt.Println(*totalRef)
+	// // * gets the value instead of the memory reference
+	// fmt.Println(*totalRef)
+
+	// arrays
+	var numbers = [4]int{1, 2, 3, 4}
+
+	fmt.Println(numbers)
+	fmt.Println(len(numbers))
+	fmt.Println(numbers[2])
 
 }
