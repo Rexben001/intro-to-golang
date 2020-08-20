@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 // // create a struct
 // type User struct {
 // 	Name  string
@@ -139,4 +137,13 @@ func main() {
 	// sam.Name = "sam"
 	// fmt.Printf("%+v\n", sam)
 
+	// //loops
+	// var numbers = []int{1, 2, 7, 9, 3, 4}
+	// for i := 0; i < len(numbers); i++ {
+	// 	fmt.Println(numbers[i])
+	// }
+	// // use range
+	// for i := range numbers {
+	// 	fmt.Println(numbers[i])
+	// }
 }
