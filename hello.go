@@ -1,8 +1,13 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
+
+// // create a struct
+// type User struct {
+// 	Name  string
+// 	Email string
+// 	Age   int
+// }
 
 func main() {
 
@@ -105,22 +110,33 @@ func main() {
 	// sort.Ints(numbers)
 	// fmt.Println(numbers)
 
-	//maps
-	// new => allocates and does not initialize a memory
-	scores := make(map[string]int)
-	scores["rex"] = 50
-	scores["rex2"] = 51
-	scores["jon"] = 22
-	fmt.Println(scores)
-	fmt.Println(scores["rex2"])
+	// //maps
+	// // new => allocates and does not initialize a memory
+	// scores := make(map[string]int)
+	// scores["rex"] = 50
+	// scores["rex2"] = 51
+	// scores["jon"] = 22
+	// fmt.Println(scores)
+	// fmt.Println(scores["rex2"])
 
-	// delete a key and value pair
-	delete(scores, "rex2")
-	fmt.Println(scores)
+	// // delete a key and value pair
+	// delete(scores, "rex2")
+	// fmt.Println(scores)
 
-	// iterate over the map using range
-	for k, v := range scores {
-		fmt.Printf("Score if %v is %v \n", k, v)
-	}
+	// // iterate over the map using range
+	// for k, v := range scores {
+	// 	fmt.Printf("Score if %v is %v \n", k, v)
+	// }
+
+	// //structs
+	// tob := User{"rob", "rob@vv.cc", 77}
+	// // print out the values
+	// fmt.Printf("%v\n", tob)
+	// // print out the values and keys
+	// fmt.Printf("%+v\n", tob)
+
+	// var sam = new(User)
+	// sam.Name = "sam"
+	// fmt.Printf("%+v\n", sam)
 
 }
