@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"sort"
 )
 
 func main() {
@@ -105,5 +104,23 @@ func main() {
 	// fmt.Println(isSorted)
 	// sort.Ints(numbers)
 	// fmt.Println(numbers)
+
+	//maps
+	// new => allocates and does not initialize a memory
+	scores := make(map[string]int)
+	scores["rex"] = 50
+	scores["rex2"] = 51
+	scores["jon"] = 22
+	fmt.Println(scores)
+	fmt.Println(scores["rex2"])
+
+	// delete a key and value pair
+	delete(scores, "rex2")
+	fmt.Println(scores)
+
+	// iterate over the map using range
+	for k, v := range scores {
+		fmt.Printf("Score if %v is %v \n", k, v)
+	}
 
 }
