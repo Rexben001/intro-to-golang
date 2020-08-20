@@ -1,11 +1,29 @@
 package main
 
+import "fmt"
+
 // // create a struct
 // type User struct {
 // 	Name  string
 // 	Email string
 // 	Age   int
 // }
+
+// create functions
+
+func multiply(a int, b int) int {
+	return a * b
+}
+
+func loopAdd(values ...int) (int, int, string) {
+	sum := 0
+	for i := range values {
+		sum = sum + values[i]
+	}
+	length := len(values)
+	name := "Got here"
+	return sum, length, name
+}
 
 func main() {
 
@@ -146,4 +164,9 @@ func main() {
 	// for i := range numbers {
 	// 	fmt.Println(numbers[i])
 	// }
+
+	fmt.Println(multiply(2, 3))
+
+	res, leng, name := loopAdd(2, 3, 4, 6, 78)
+	fmt.Println(res, leng, name)
 }
