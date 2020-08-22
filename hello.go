@@ -12,7 +12,7 @@ import "fmt"
 // create functions
 
 func multiply(a int, b int) int {
-	fmt.Printf("The multiplication of %v and %v = %v", a, b, a*b)
+	fmt.Printf("The multiplication of %v and %v = %v \n", a, b, a*b)
 	return a * b
 }
 
@@ -174,4 +174,10 @@ func main() {
 	// // defer() => used to defer the execution of a function call until the function that contains the defer statement completes execution
 	// defer multiply(3, 4)
 	// fmt.Println("Got here first")
+
+	// stacking defer => multiple defer statements, LIFO, starts from bottom to top
+	defer multiply(30, 4)
+	defer multiply(300, 4)
+	defer multiply(3000, 4)
+	fmt.Println("Got here first")
 }
