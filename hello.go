@@ -12,6 +12,7 @@ import "fmt"
 // create functions
 
 func multiply(a int, b int) int {
+	fmt.Printf("The multiplication of %v and %v = %v", a, b, a*b)
 	return a * b
 }
 
@@ -165,8 +166,12 @@ func main() {
 	// 	fmt.Println(numbers[i])
 	// }
 
-	fmt.Println(multiply(2, 3))
+	// fmt.Println(multiply(2, 3))
 
-	res, leng, name := loopAdd(2, 3, 4, 6, 78)
-	fmt.Println(res, leng, name)
+	// res, leng, name := loopAdd(2, 3, 4, 6, 78)
+	// fmt.Println(res, leng, name)
+
+	// // defer() => used to defer the execution of a function call until the function that contains the defer statement completes execution
+	// defer multiply(3, 4)
+	// fmt.Println("Got here first")
 }
