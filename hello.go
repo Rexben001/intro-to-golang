@@ -1,13 +1,16 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strconv"
+)
 
 // // create a struct
-// type User struct {
-// 	Name  string
-// 	Email string
-// 	Age   int
-// }
+type User struct {
+	Name  string
+	Email string
+	Age   int
+}
 
 // create functions
 
@@ -26,6 +29,12 @@ func loopAdd(values ...int) (int, int, string) {
 	return sum, length, name
 }
 
+// methods
+func (u User) CallUser() string {
+	s := fmt.Sprintf("My name is %s, I'm %s years of age, you can reach trhough %s ", u.Name, strconv.Itoa(u.Age), u.Email)
+	// s := []string{"My name is", u.Name, "I'm", u.Age, "years of age\n"}
+	return s
+}
 func main() {
 
 	// // := it guesses the dataype and use it
@@ -175,9 +184,14 @@ func main() {
 	// defer multiply(3, 4)
 	// fmt.Println("Got here first")
 
-	// stacking defer => multiple defer statements, LIFO, starts from bottom to top
-	defer multiply(30, 4)
-	defer multiply(300, 4)
-	defer multiply(3000, 4)
-	fmt.Println("Got here first")
+	// // stacking defer => multiple defer statements, LIFO, starts from bottom to top
+	// defer multiply(30, 4)
+	// defer multiply(300, 4)
+	// defer multiply(3000, 4)
+	// fmt.Println("Got here first")
+
+	// // methods
+	// user := User{"Ben", "rex@bmm.co", 30}
+	// fmt.Println(user.CallUser())
+
 }
