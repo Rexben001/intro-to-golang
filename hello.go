@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"strconv"
+	"time"
 )
 
 // // create a struct
@@ -194,4 +195,12 @@ func main() {
 	// user := User{"Ben", "rex@bmm.co", 30}
 	// fmt.Println(user.CallUser())
 
+	// // Concurrency is achieved in Go using Goroutines and Channels.
+	// // Goroutine is a function which can run concurrently with other functions
+
+	// // the for loop didn't wait for multiply to complete execution before it started
+	// go multiply(3, 4)
+	// for i := 0; i < 5; i++ {
+	// 	fmt.Println("In main")
+	// }
 }
