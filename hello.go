@@ -203,4 +203,10 @@ func main() {
 	// for i := 0; i < 5; i++ {
 	// 	fmt.Println("In main")
 	// }
+
+	//channels
+	//the main() will wait on the statement receiving channel data until it gets the data
+
+
+	//
 }
