@@ -218,22 +218,25 @@ func main() {
 
 	//channels
 	//the main() will wait on the statement receiving channel data until it gets the data
+	// To create a channel 	ch := make(chan int)
+	// To send data to a channel     ch <- x
+	// To receive data from a channel    y := <- ch
 
-// 	//Select => can be viewed as a switch statement which works on channels. Here the case statements will be a channel operation.//creating channel variables for transporting string values
-// 	chan1 := make(chan string)
-// 	chan2 := make(chan string)
+	// 	//Select => can be viewed as a switch statement which works on channels. Here the case statements will be a channel operation.//creating channel variables for transporting string values
+	// 	chan1 := make(chan string)
+	// 	chan2 := make(chan string)
 
-// 	//invoking the subroutines with channel variables
-// 	go data1(chan1)
-// 	go data2(chan2)
+	// 	//invoking the subroutines with channel variables
+	// 	go data1(chan1)
+	// 	go data2(chan2)
 
-// 	//Both case statements wait for data in the chan1 or chan2.
-// 	//chan2 gets data first since the delay is only 2 sec in data2().
-// 	//So the second case will execute and exits the select block
-// 	select {
-// 	case x := <-chan1:
-// 		fmt.Println(x)
-// 	case y := <-chan2:
-// 		fmt.Println(y)
-// 	}
-// }
+	// 	//Both case statements wait for data in the chan1 or chan2.
+	// 	//chan2 gets data first since the delay is only 2 sec in data2().
+	// 	//So the second case will execute and exits the select block
+	// 	select {
+	// 	case x := <-chan1:
+	// 		fmt.Println(x)
+	// 	case y := <-chan2:
+	// 		fmt.Println(y)
+	// 	}
+}
