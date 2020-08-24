@@ -320,6 +320,10 @@ func main() {
 
 // solve algorithm questions
 
+package main
+
+import "fmt"
+
 func palindrone(words string) bool {
 	len := len(words) - 1
 
@@ -347,22 +351,45 @@ func countOccuerences(wordArr []string) map[string]int {
 	}
 	return result
 }
+
+func checkDuplicates(numArr []int, numArr2 []int) []int {
+
+	result := make(map[string]int)
+	var resp []int
+
+	for i := range numArr {
+		result[string(numArr[i])] = numArr[i]
+	}
+	for i := range numArr2 {
+
+		if result[string(numArr2[i])] > 0 {
+			resp = append(resp, numArr2[i])
+		}
+	}
+	return resp
+}
 func main() {
 	fmt.Println("Hello World")
 
 	//answer := palindrone("abbas")
 	//fmt.Println(answer)
-	var greetings = []string{"hello", "world", "hello", "yes", "yes", "no", "me", "no", "us"}
-	answer := countOccuerences(greetings)
-	fmt.Println(answer)
+	//var greetings = []string{"hello", "world", "hello", "yes", "yes", "no", "me", "no", "us"}
+	// answer := countOccuerences(greetings)
+	// fmt.Println(answer)
 
-	//remove items less than 2
-	for v, k := range answer {
-		if k < 2 {
-			delete(answer, v)
-		}
-	}
+	//	//remove items less than 2
+	//	for v, k := range answer {
+	//	if k < 2 {
+	//		delete(answer, v)
+	//	}
+	//	}
+	//	fmt.Println(answer)
+	//arr1 = [1,2,4,5,6,7]
+	// arr2 = [1,3,5,6,9,0]
+	arr1 := []int{1, 2, 4, 5, 6, 7}
+	arr2 := []int{1, 3, 5, 6, 9, 0}
 
+	answer := checkDuplicates(arr1, arr2)
 	fmt.Println(answer)
 
 }
