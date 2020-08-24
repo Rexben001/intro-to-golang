@@ -1,11 +1,11 @@
 package main
 
 import (
+	"errors"
 	"fmt"
 	"os"
 	"strconv"
 	"time"
-	"errors"
 )
 
 // // create a struct
@@ -61,6 +61,19 @@ func fileopen(name string) {
 		return
 	} else {
 		fmt.Println("file opened", f.Name())
+	}
+}
+
+//function accepts a filename and tries to open it.
+func fileOpen(name string) (string, error) {
+	f, er := os.Open(name)
+
+	//er will be nil if the file exists else it returns an error object
+	if er != nil {
+		//created a new error object and returns it
+		return "", errors.New("Custom error message: File name is wrong")
+	} else {
+		return f.Name(), nil
 	}
 }
 
@@ -260,7 +273,16 @@ func main() {
 	// Mutex is used when you don't want to allow a resource to be accessed by multiple subroutines at the same time.
 	// Mutex has 2 methods - Lock and Unlock. Mutex is contained in sync package.
 
-	// Error Handling
-	fileopen("invalid.txt")
+	// // Error Handling
+	// fileopen("invalid.txt")
+
+	// // Custom Errors
+	// //receives custom error or nil after trying to open the file
+	// filename, error := fileOpen("invalid.txt")
+	// if error != nil {
+	// 	fmt.Println(error)
+	// } else {
+	// 	fmt.Println("file opened", filename)
+	// }
 
 }
