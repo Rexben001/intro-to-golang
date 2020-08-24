@@ -317,3 +317,52 @@ func main() {
 		return
 	}
 }
+
+// solve algorithm questions
+
+func palindrone(words string) bool {
+	len := len(words) - 1
+
+	for i := 0; i <= len; i++ {
+		if len < i {
+			return true
+		}
+		if words[i] != words[len] {
+			return false
+		}
+		len = len - 1
+	}
+	return true
+}
+
+func countOccuerences(wordArr []string) map[string]int {
+	result := make(map[string]int)
+
+	for i := range wordArr {
+		if result[wordArr[i]] > 0 {
+			result[wordArr[i]] += 1
+		} else {
+			result[wordArr[i]] = 1
+		}
+	}
+	return result
+}
+func main() {
+	fmt.Println("Hello World")
+
+	//answer := palindrone("abbas")
+	//fmt.Println(answer)
+	var greetings = []string{"hello", "world", "hello", "yes", "yes", "no", "me", "no", "us"}
+	answer := countOccuerences(greetings)
+	fmt.Println(answer)
+
+	//remove items less than 2
+	for v, k := range answer {
+		if k < 2 {
+			delete(answer, v)
+		}
+	}
+
+	fmt.Println(answer)
+
+}
