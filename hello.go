@@ -368,6 +368,26 @@ func checkDuplicates(numArr []int, numArr2 []int) []int {
 	}
 	return resp
 }
+
+func checkDuplicates2DArray(numArr [][]int) []int {
+first := numArr[0]
+second := numArr[1]
+
+	result := make(map[string]bool)
+	var resp []int
+
+	for i := range first {
+		result[string(first[i])] = true
+	}
+	for i := range second {
+
+		if result[string(second[i])] {
+			resp = append(resp, second[i])
+		}
+	}
+	return resp
+}
+
 func main() {
 	fmt.Println("Hello World")
 
@@ -389,7 +409,14 @@ func main() {
 	arr1 := []int{1, 2, 4, 5, 6, 7}
 	arr2 := []int{1, 3, 5, 6, 9, 0}
 
-	answer := checkDuplicates(arr1, arr2)
+	//answer := checkDuplicates(arr1, arr2)
+	//fmt.Println(answer)
+var numArrs [][] int
+
+numArrs = append(numArrs, arr1)
+numArrs = append(numArrs, arr2)
+
+	answer := checkDuplicates2DArray(numArrs)
 	fmt.Println(answer)
 
 }
