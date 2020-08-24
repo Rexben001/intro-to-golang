@@ -3,6 +3,7 @@ package main
 import (
 	"errors"
 	"fmt"
+	"io/ioutil"
 	"os"
 	"strconv"
 	"time"
@@ -285,4 +286,12 @@ func main() {
 	// 	fmt.Println("file opened", filename)
 	// }
 
+	// // Reading files
+	// // outil.ReadFile("data.txt") reads the data and returns a byte sequence.
+	// data, err := ioutil.ReadFile("data.txt")
+	// if err != nil {
+	// 	fmt.Println("File reading error", err)
+	// 	return
+	// }
+	// fmt.Println("Contents of file:", string(data))
 }
