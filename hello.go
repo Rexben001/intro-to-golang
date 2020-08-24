@@ -2,8 +2,10 @@ package main
 
 import (
 	"fmt"
+	"os"
 	"strconv"
 	"time"
+	"errors"
 )
 
 // // create a struct
@@ -48,6 +50,20 @@ func data2(ch chan string) {
 	time.Sleep(2 * time.Second)
 	ch <- "from data2()"
 }
+
+//function accepts a filename and tries to open it.
+func fileopen(name string) {
+	f, er := os.Open(name)
+
+	//er will be nil if the file exists else it returns an error object
+	if er != nil {
+		fmt.Println(er)
+		return
+	} else {
+		fmt.Println("file opened", f.Name())
+	}
+}
+
 func main() {
 
 	// // := it guesses the dataype and use it
@@ -239,4 +255,12 @@ func main() {
 	// 	case y := <-chan2:
 	// 		fmt.Println(y)
 	// 	}
+
+	// Mutex is the short form for mutual exclusion.
+	// Mutex is used when you don't want to allow a resource to be accessed by multiple subroutines at the same time.
+	// Mutex has 2 methods - Lock and Unlock. Mutex is contained in sync package.
+
+	// Error Handling
+	fileopen("invalid.txt")
+
 }
