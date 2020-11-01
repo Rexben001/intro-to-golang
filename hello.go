@@ -419,4 +419,26 @@ numArrs = append(numArrs, arr2)
 	answer := checkDuplicates2DArray(numArrs)
 	fmt.Println(answer)
 
+	// pointers and dereference
+	
+	x := 7
+	// pointer or memory loc of x => &x
+	// Save the pointer of x to y
+	y := &x
+	fmt.Println(x,y)
+	// dereference the pointer
+	*y = 8
+	fmt.Println(x,y)
+	
+	// changing the value of a variable by changing it's pointer
+
+	changed := "Me!"
+	changeVal(&changed)
+	fmt.Println(changed)
+
+
+}
+
+func changeVal (str *string){
+	*str = "changed"
 }
