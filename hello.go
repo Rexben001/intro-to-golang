@@ -527,4 +527,25 @@ func main() {
     squares, cubes := <-sqrch, <-cubech
     fmt.Println("Final output", squares + cubes)
 }
-*?
+*/
+
+// chan<- int denotes a send only channel as the arrow is pointing to chan
+// Closing channels and for range loops on channels
+
+// Create a buffered channel, it has a second param to specify the size of the buffer, size must be an int
+// ch := make(chan type, capacity)  
+// length is different from capacity (cap)
+
+/*
+Write two strings to a channel and it does not block because of the capacity
+
+func main() {  
+    ch := make(chan string, 2)
+    ch <- "naveen"
+    ch <- "paul"
+    fmt.Println(<- ch)
+    fmt.Println(<- ch)
+}
+*/
+
+// A WaitGroup is used to wait for a collection of Goroutines to finish executing.
